@@ -1,5 +1,8 @@
-import express from 'express';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
+import mongoose from "mongoose";
 
-const router = express.Router();
+const UserSchema = new mongoose.Schema({
+    username: {type: String, required: true, unique: true },
+    password: {type: String, required: true},
+});
+
+export const UserModel = mongoose.model("users", UserSchema)
