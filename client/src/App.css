@@ -1,10 +1,118 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c9ada7;
+  }
+
+.subtitle-dashboard{
+  font-size:50px;
+  background-color:purple;
+  padding:30px;
+  margin:70px;
+  color:white;
+}
+
+
+
+.navbar{
+  font-size: 40px;
+  color:white;
+  margin-left: 30px;
+  padding-left:50px;
+  padding-right:70px;
+  background-color:#4d15e9;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+/*/////buttons///*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 80px;
+  grid-gap: 10px;
+  background-color: #4d15e9;
+  padding: 5px;
+}
+
+.withdrawal{
+  background-color: rgb(151, 6, 6);
+  padding: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.enrolled{
+  background-color: rgb(6, 83, 109);
+  padding: 20px;
+  padding-left:30px;
+  padding-right:30px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.absent{
+  background-color: rgb(255, 119, 16);
+  padding: 20px;
+  padding-left:35px;
+  padding-right:35px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.late{
+  background-color: rgb(217, 180, 17);
+  padding: 20px;
+  padding-left:45px;
+  padding-right:45px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.present{
+  background-color: rgb(7, 139, 20);
+  padding: 20px;
+  padding-left:29px;
+  padding-right:29px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +121,51 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.auth-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 400px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.navbar {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #6d6875;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(188, 144, 144);
+  text-decoration: none;
+}
+
+a {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
 }
