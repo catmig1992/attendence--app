@@ -14,6 +14,17 @@ const Login = () =>{
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        try{
+
+        }catch (err_){
+            console.error(err)
+        }
+
+    }
+
+
     return(
         <Form
             username={username}
