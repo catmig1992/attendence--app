@@ -12,12 +12,11 @@ export const Navbar = () => {
         navigate("/"); //caling navigate for rediraction after logout
     }
 
-
-     return (
+    
+    return (
         <div className="navbar">
             <Link to="/"> Home </Link>
-            <Link to="/create-recipe"> Create Recipe </Link>
-            <Link to="/saved-recipes"> Saved Recipes </Link>
+            <Link to="/about"> About </Link>
             {!cookies.access_token ? (<Link to="/auth"> Login/Register</Link>): 
             (<button onClick={logout}>Logout</button>)}
     </div> 
