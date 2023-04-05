@@ -9,7 +9,7 @@ export const Navbar = () => {
     const logout = () => {
         setCookies("access_token", ""); //setting access token to be an empty token
         window.localStorage.removeItem("userID");    //clear userID in local storgage
-        navigate("/"); //caling navigate for rediraction after logout
+        navigate("/auth"); //caling navigate for redirectionto auth page(login/register) after logout
     }
 
     
