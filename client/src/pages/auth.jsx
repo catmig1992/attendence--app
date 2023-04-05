@@ -29,7 +29,7 @@ const Login = () =>{
             password,});
             setCookies("access_token", response.data.token)
             window.localStorage.setItem("userID", response.data.userID); //sets user ID to local storage -- easier access
-            navigate("/")    // calling useNavigate hook here for direction to Homepage
+            navigate("/portal")    // calling useNavigate hook here for direction to Homepage
         }catch (err){
             console.error(err)
         }
