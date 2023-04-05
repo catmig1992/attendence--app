@@ -110,7 +110,7 @@ const Form = ({username,
                 onChange={(event) =>setPassword(event.target.value)}/>
             </div>
 
-            <button type="submit">{label}</button>
+            <button type="submit" class="register-buttons">{label}</button>
         </form>
     </div>
 

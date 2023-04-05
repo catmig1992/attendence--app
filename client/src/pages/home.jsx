@@ -1,7 +1,7 @@
 export const Home = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <img src="/image/timely.png" alt="Timely" width="700px" height="600px" className="home_image"/>
     </div>
   );
 };

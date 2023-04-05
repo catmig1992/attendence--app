@@ -12,12 +12,15 @@ body {
   padding: 0;
 }
 
+.home_image{
+  margin:50px;
+}
+
 .auth {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #c9ada7;
   }
 
 .subtitle-dashboard{
@@ -26,9 +29,21 @@ body {
   padding:30px;
   margin:70px;
   color:white;
+  text-align: center;
 }
 
+.create{
+  text-align:center;
+  margin-left:320px;
+  background-color:blue;
+  padding:30px;
+  padding-right:100px;
+  padding-left: 100px;
+  color: white;
+  font-size:large;
+  border-radius: 10px;
 
+}
 
 .navbar{
   font-size: 40px;
@@ -119,6 +134,13 @@ a:link {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.register-buttons{
+  background-color:#4d15e9;
+  color:white;
+  padding:12px;
+  border-radius: 7px;
 }
 
 .auth-container {
