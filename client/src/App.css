@@ -7,6 +7,21 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.howto{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.about{
+  text-align:center;
+  font-size: 50px;
+}
+
+.tagline{
+  text-align: center;
+}
+
 body {
   margin: 0;
   padding: 0;
