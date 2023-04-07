@@ -3,6 +3,8 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 import {userRouter} from './routes/adminusers.js';
+//import {createclassRouter} from './routes/createclass.js';
+
 
 const app = express();
 
@@ -10,6 +12,8 @@ app.use(express.json()); //to get data from frontend
 app.use(cors());
 
 app.use("/auth", userRouter);
+//app.use("/createclass", createclassRouter);
+
 mongoose.connect(
     "mongodb+srv://danasou:summer18@attendance.w6srb6x.mongodb.net/?retryWrites=true&w=majority",
         {
