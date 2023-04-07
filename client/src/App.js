@@ -5,6 +5,7 @@ import { Auth } from "./pages/auth";
 import { About } from "./pages/about";
 import { Portal } from "./pages/portal";
 import { Navbar } from "./components/navbar";
+import { Create } from "./pages/create";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/about" element={<About />} />
           <Route path="/portal" element={<Portal />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       </Router>
     </div>

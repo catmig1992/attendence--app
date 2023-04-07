@@ -1,78 +1,60 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import CardGroup from "react-bootstrap/CardGroup";
-import "../App.css";
+/*import React, { useState } from "react";//
 
-export default function Create() {
-  return (
-    <div className="create-class">
-     	<main>
-			<h1>Create a Class</h1>
-			<form onSubmit={handleSubmit}>
-				<div className="form-group">
-					<label htmlFor="name">Class Name</label>
-					<input
-						required
-						value={place.name}
-						onChange={e => setPlace({ ...place, name: e.target.value })}
-						className="form-control"
-						id="name"
-						name="name"
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="founded">First Name</label>
-					<input
-						required
-						value={place.founded}
-						onChange={e => setPlace({ ...place, founded: e.target.value })}
-						className="form-control"
-						id="founded"
-						name="founded"
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="last-name">Last Name</label>
-					<input
-						value={place.pic}
-						onChange={e => setPlace({ ...place, pic: e.target.value })}
-						className="form-control"
-						id="last-name"
-						name="last-name"
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="student-id">Student ID</label>
-					<input
-						value={place.city}
-						onChange={e => setPlace({ ...place, city: e.target.value })}
-						className="form-control"
-						id="student-id"
-						name="student-id"
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="state">State</label>
-					<input
-						value={place.state}
-						onChange={e => setPlace({ ...place, state: e.target.value })}
-						className="form-control"
-						id="state"
-						name="state"
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="cuisines">Cuisines</label>
-					<input
-						value={place.cuisines}
-						onChange={e => setPlace({ ...place, cuisines: e.target.value })}
-						className="form-control"
-						id="cuisines" name="cuisines" required />
-				</div>
-				<input className="btn btn-primary" type="submit" value="Add Place" />
-			</form>
-		</main>
-    </div>
-  );
-}
+
+function FieldForm() {
+  const [fieldCount, setFieldCount] = useState(1);
+  const [fields, setFields] = useState([{ id: 1, name: "field-1" }]);
+
+  function addField() {
+    const newFieldCount = fieldCount + 1;
+    const newFields = [...fields, { id: newFieldCount, name: `field-${newFieldCount}` }];
+    setFieldCount(newFieldCount);
+    setFields(newFields);
+    
+    
+      {fields.map((field) => (
+        <div key={field.id}>
+          <label htmlFor={field.name}>Field {field.id}:</label>
+          <input type="text" id={field.name} name={field.name} />
+        </div>
+      ))}
+      <button type="button" onClick={addField}>Add Field</button>
+    
+    
+    
+    
+    */
+
+
+
+
+
+export const Create = () => {
+    return (
+        <><div className="form-group-attendance">
+            <form className="form">
+                <label for="first-name" class="name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required />
+
+                <label for="last-name"class="name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required />
+            </form>
+        </div><div className="form-group-attendance2">
+                <form className="form">
+                    <label for="first-name" class="name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required />
+
+                    <label for="last-name" class="name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required />
+                </form>
+                
+               
+            </div><div className="form-group-attendance3">
+
+<button class="save"type="submit">Save</button>
+
+
+ 
+        </div></>
+    );
+  };

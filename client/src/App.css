@@ -13,6 +13,60 @@
   font-weight: bold;
 }
 
+.form-group-attendance{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 20px;
+  margin-top: 70px;
+  grid-gap: 10px;
+  background-color: #4d15e9;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+.form-group-attendance2{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 20px;
+  margin-top: 20px;
+  grid-gap: 10px;
+  background-color: #4d15e9;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+
+.form-group-attendance3{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 20px;
+  margin-top: 20px;
+  grid-gap: 10px;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+.save{
+  background-color:blue;
+  color: white;
+  font-size:50px;
+  padding-left:250px;
+  padding-right:250px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+
+.name{
+  margin-left:20px;
+  margin-right:40px;
+  font-size: 30px;
+}
+
+
 .about{
   text-align:center;
   font-size: 50px;

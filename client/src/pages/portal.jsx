@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export const Portal = () => {
   return (
     <div>
       <h1 class="subtitle-dashboard"> Attendance Dashboard </h1>
-      
-      <form action="/create/:id" method="post">
-          <button type="submit" class="create">
+     <Link to="/create">
+          <button  class="create">
             Create Class
           </button>
-          </form>
+          </Link>
+  
 
       <div class="grid-container">
         <form action="/delete/:id" method="post">
