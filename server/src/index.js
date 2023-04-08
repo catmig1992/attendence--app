@@ -12,7 +12,7 @@ app.use(express.json()); //to get data from frontend
 app.use(cors());
 
 app.use("/auth", userRouter);
-app.use("/create", createclassRouter);
+app.use("/portal", createclassRouter);
 
 mongoose.connect(
     "mongodb+srv://danasou:summer18@attendance.w6srb6x.mongodb.net/?retryWrites=true&w=majority",
