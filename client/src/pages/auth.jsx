@@ -13,10 +13,10 @@ export const Auth = () => {
 };
 
 const Login = () =>{
+    const [_, setCookies] = useCookies (["access_token"]);
+
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
-    const [_, setCookies] = useCookies (["access_token"]);
 
     const navigate = useNavigate(); 
 
@@ -27,6 +27,7 @@ const Login = () =>{
          const response = await axios.post("http://localhost:3001/auth/login", {
             username, 
             password,});
+
             setCookies("access_token", response.data.token)
             window.localStorage.setItem("userID", response.data.userID); //sets user ID to local storage -- easier access
             navigate("/portal")    // calling useNavigate hook here for direction to Homepage
