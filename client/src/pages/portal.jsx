@@ -12,24 +12,9 @@ export const Portal = () => {
   
 
       <div class="grid-container">
-        <form action="/delete/:id" method="post">
-          <button type="submit" class="withdrawal">
-            Withdrawal
-          </button>
-        </form>
-        <form action="/add/:id" method="post">
-          <button type="submit" class="enrolled">
-            Enrolled
-          </button>
-        </form>
         <form action="/add/:id" method="post">
           <button type="submit" class="absent">
             Absent
-          </button>
-        </form>
-        <form action="/add/:id" method="post">
-          <button type="submit" class="late">
-            Late
           </button>
         </form>
         <form action="/add/:id" method="post">
