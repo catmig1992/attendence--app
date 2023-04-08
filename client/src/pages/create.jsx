@@ -25,36 +25,25 @@ function FieldForm() {
     
     */
 
+import FieldForm from "../components/fieldform";
+
 
 
 
 
 export const Create = () => {
     return (
-        <><div className="form-group-attendance">
-            <form className="form">
-                <label for="first-name" class="name">First Name</label>
-                <input type="text" id="first-name" name="first-name" required />
 
-                <label for="last-name"class="name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required />
-            </form>
-        </div><div className="form-group-attendance2">
-                <form className="form">
-                    <label for="first-name" class="name">First Name</label>
-                    <input type="text" id="first-name" name="first-name" required />
-
-                    <label for="last-name" class="name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" required />
-                </form>
-                
-               
-            </div><div className="form-group-attendance3">
-
-<button class="save"type="submit">Save</button>
+<div className="form-group-attendance">
+<form className="form" method="POST" action="/portal">
+              <FieldForm class="form"/>
+              <button class="save"type="submit">Save</button>
+              </form>
+              </div>
+          
 
 
- 
-        </div></>
+
+
     );
   };
