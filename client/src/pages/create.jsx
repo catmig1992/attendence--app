@@ -27,23 +27,15 @@ function FieldForm() {
 
 import FieldForm from "../components/fieldform";
 
-
-
-
-
 export const Create = () => {
-    return (
-
-<div className="form-group-attendance">
-<form className="form" method="POST" action="/portal">
-              <FieldForm class="form"/>
-              <button class="save"type="submit">Save</button>
-              </form>
-              </div>
-          
-
-
-
-
-    );
-  };
+  return (
+    <div className="form-group-attendance">
+      <form className="form" method="POST" action="/portal">
+        <FieldForm class="form" />
+        <button class="save" type="submit">
+          Save
+        </button>
+      </form>
+    </div>
+  );
+};
