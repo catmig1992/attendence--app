@@ -145,6 +145,10 @@ a:link {
   color: white;
 }
 
+.nav-link {
+  padding-right: 4em;
+}
+
 /*/////buttons///*/
 .grid-container {
   display: grid;
@@ -191,6 +195,15 @@ a:link {
   color: white;
   padding: 12px;
   border-radius: 7px;
+}
+
+.logout {
+  border: none;
+  margin: 10px;
+  padding-top: 2px;
+  font-size: 24px;
+  background-color: #6d6875;
+  color: white;
 }
 
 .auth-container {
