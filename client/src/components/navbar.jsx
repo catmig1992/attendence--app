@@ -7,8 +7,8 @@ export const Navbar = () => {
 
   const logout = () => {
     setCookies("access_token", ""); //setting access token to be an empty token
-    window.localStorage.removeItem("userID"); //clear userID in local storgage
-    navigate("/auth"); //caling navigate for redirectionto auth page(login/register) after logout
+    window.localStorage.removeItem("userID"); //clear userID in local storage
+    navigate("/auth"); //calling navigate for redirection to auth page(login/register) after logout
   };
 
   return (
@@ -24,6 +24,14 @@ export const Navbar = () => {
       <Link class="nav-link" to="/portal">
         {" "}
         Portal{" "}
+      </Link>
+      <Link class="nav-link" to="/create-class">
+        {" "}
+        Create Class Roster{" "}
+      </Link>
+      <Link class="nav-link" to="/class-list">
+        {" "}
+        Class List{" "}
       </Link>
       {!cookies.access_token ? (
         <Link to="/auth"> Login/Register</Link>
