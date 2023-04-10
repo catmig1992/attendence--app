@@ -1,6 +1,6 @@
-const db = require("../models")
+const db = require("../models");
 
-db.createclass
+db.rosters
   .create([
     {
       firstName: "David",
@@ -32,8 +32,7 @@ db.createclass
     process.exit();
   });
 
-  // still needs to be tested
-  // many not be the final version
-  // in the terminal, run command: node seeders/seed-rosters.js
-  // once finalized, command should be included in the ReadMe file for the Demo portion
-  
+// still needs to be tested
+// many not be the final version
+// in the terminal, run command: node seeders/seed-rosters.js
+// once finalized, command should be included in the ReadMe file for the Demo portion

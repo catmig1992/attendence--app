@@ -3,15 +3,16 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 import { userRouter } from "./routes/adminusers.js";
-import { createclassRouter } from "./routes/createclass.js";
+import { rosterRouter } from "./routes/roster.js";
 
 const app = express();
 
 app.use(express.json()); //to get data from frontend
 app.use(cors());
 
+//routes
 app.use("/auth", userRouter);
-app.use("/portal", createclassRouter);
+app.use("/create-class", rosterRouter);
 
 mongoose.connect(
   "mongodb+srv://danasou:summer18@attendance.w6srb6x.mongodb.net/?retryWrites=true&w=majority",

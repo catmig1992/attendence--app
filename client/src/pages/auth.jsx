@@ -23,7 +23,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      //respnse will receive everyting sent back from API
+      //response will receive everything sent back from API
       const response = await axios.post("http://localhost:3001/auth/login", {
         username,
         password,
@@ -31,9 +31,10 @@ const Login = () => {
 
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userID", response.data.userID); //sets user ID to local storage -- easier access
-      navigate("/portal"); // calling useNavigate hook here for direction to Homepage
+      navigate("/create-class"); // calling useNavigate hook here for direction to Homepage
     } catch (err) {
       console.error(err);
+      alert("Wrong username or password. Please register or try again.");
     }
   };
 
