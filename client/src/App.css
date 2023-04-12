@@ -40,10 +40,28 @@ label {
   margin: 50px;
 }
 
+.home{
+  background: url('http://localhost:3000/image/background.png');
+  background-size: 900px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
 /*****about page*****/
 .about {
   text-align: center;
   font-size: 50px;
+}
+
+.school_image{
+  
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #bbb;
+  
 }
 
 .tagline {
@@ -62,6 +80,7 @@ label {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: url('http://localhost:3000/image/classroom.jpg');
 }
 
 .auth-container {
@@ -86,7 +105,7 @@ label {
 /*****portal page*****/
 .subtitle-dashboard {
   font-size: 50px;
-  background-color: purple;
+  background-color: #4d15e9;
   padding: 30px;
   margin: 70px;
   color: white;
@@ -193,6 +212,10 @@ label {
   text-decoration: none;
 }
 
+.nav-link:hover{
+  color:aquamarine;
+  font-weight:bold;
+}
 .nav-link {
   padding-right: 2em;
 }
@@ -250,8 +273,71 @@ label {
   color: white;
 }
 
+/********create class roster**********/
+.create-roster{
+  background-color: #4d15e9;
+  color: white;
+  padding:80px;
+  font-size: 30px;
+  margin: 60px;
+}
+
+.title-roster{
+  text-align: center;
+  font-size: 70px;
+  margin-top:10px;
+}
+
+.aan-create-class{
+background-color: #6d6875;
+color: white;
+padding:40px;
+padding-top:10px;
+padding-bottom:10px;
+font-size:20px;
+border-radius: 10px;
+}
+
+.create-class-submit{
+  background-color: #2c700f;
+color: white;
+padding:40px;
+padding-top:10px;
+padding-bottom:10px;
+font-size:20px;
+border-radius: 10px;
+}
+
+.subject-create{
+padding-right:30px;
+}
+
+.create-fn{
+  padding-right:30px;
+
+}
+
+.create-ln{
+  padding-right:30px;
+  margin-left:30px;
+}
+
+.subject-input{
+  padding-left:60px;
+}
+
+.last-input{
+  padding-left:60px;
+}
+
+.first-input{
+  padding-left:60px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
