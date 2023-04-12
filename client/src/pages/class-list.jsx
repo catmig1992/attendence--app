@@ -11,7 +11,7 @@ export const ClassList = () => {
   useEffect(() => {
     const fetchRoster = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/create-class");
+        const response = await axios.get("http://localhost:3001/roster");
         setRoster(response.data);
       } catch (err) {
         console.log(err);
@@ -21,7 +21,7 @@ export const ClassList = () => {
     const fetchSavedRoster = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/create-class/savedCreateClass/ids/${userID}`
+          `http://localhost:3001/roster/savedCreateClass/ids/${userID}`
         );
         setSavedRoster(response.data.savedRoster);
       } catch (err) {
@@ -35,7 +35,7 @@ export const ClassList = () => {
 
   const saveRoster = async (rosterID) => {
     try {
-      const response = await axios.put("http://localhost:3001/create-class", {
+      const response = await axios.put("http://localhost:3001/roster", {
         rosterID,
         userID,
       });
