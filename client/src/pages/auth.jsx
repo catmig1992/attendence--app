@@ -113,7 +113,7 @@ const Form = ({
           />
         </div>
 
-        <button type="submit" class="register-buttons">
+        <button type="submit" className="register-buttons">
           {label}
         </button>
       </form>

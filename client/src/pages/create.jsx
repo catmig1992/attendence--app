@@ -31,8 +31,8 @@ export const Create = () => {
   return (
     <div className="form-group-attendance">
       <form className="form" method="POST" action="/portal">
-        <FieldForm class="form" />
-        <button class="save" type="submit">
+        <FieldForm className="form" />
+        <button className="save" type="submit">
           Save
         </button>
       </form>

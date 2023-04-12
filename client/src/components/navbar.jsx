@@ -13,30 +13,30 @@ export const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link class="nav-link" to="/">
+      <Link className="nav-link" to="/">
         {" "}
         Home{" "}
       </Link>
-      <Link class="nav-link" to="/about">
+      <Link className="nav-link" to="/about">
         {" "}
         About{" "}
       </Link>
-      <Link class="nav-link" to="/portal">
+      <Link className="nav-link" to="/portal">
         {" "}
         Portal{" "}
       </Link>
-      <Link class="nav-link" to="/create-class">
+      <Link className="nav-link" to="/create-class">
         {" "}
         Create Class Roster{" "}
       </Link>
-      <Link class="nav-link" to="/class-list">
+      <Link className="nav-link" to="/class-list">
         {" "}
         Class List{" "}
       </Link>
       {!cookies.access_token ? (
         <Link to="/auth"> Login/Register</Link>
       ) : (
-        <button class="logout" onClick={logout}>
+        <button className="logout" onClick={logout}>
           Logout
         </button>
       )}
