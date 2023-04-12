@@ -2,7 +2,7 @@ export const Home = () => {
   return (
     <div>
       <img
-        src="/image/timely.png"
+        src="/image/logo.png"
         alt="Timely"
         width="700px"
         height="600px"

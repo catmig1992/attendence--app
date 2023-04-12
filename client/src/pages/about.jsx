@@ -2,6 +2,13 @@ export const About = () => {
   return (
     <div>
       <h1 class="about">About This App</h1>
+      <img
+        src="/image/school.jpg"
+        alt="school"
+        height="300px"
+        width="900px"
+        className="school_image"
+      />
       <h2 class="tagline">
         This is an attendance application that will record class attendance for
         Educators to keep record of class.

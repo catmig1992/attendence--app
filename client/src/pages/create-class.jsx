@@ -49,26 +49,40 @@ export const CreateClass = () => {
 
   return (
     <div className="create-roster">
-      <h2>Create Class Roster</h2>
+      <h2 class="title-roster">Create Class Roster</h2>
       <form onSubmit={onSubmit}>
-        <label htmlFor="subject">Subject</label>
+        <p><label htmlFor="subject" class="subject-create">Subject</label>
         <input
           type="text"
           id="subject"
           name="subject"
+          class="subject-input"
           onChange={handleChange}
-        />
+        /></p>
 
-        <label htmlFor="FirstName">First Name</label>
-        <textarea
+        <p><label htmlFor="FirstName" class="create-fn">First Name</label>
+        <input
           id="FirstName"
           name="FirstName"
+          class="first-input"
           onChange={handleChange}
-        ></textarea>
+        ></input>
 
-        <button onClick={addFirstName} type="button">
+<label htmlFor="LastName" class="create-ln">Last Name</label>
+        <input
+          id="LastName"
+          name="LastName"
+          class="last-input"
+          onChange={handleChange}
+        ></input>
+        </p>
+
+<p>
+        <button onClick={addFirstName} type="button" class="aan-create-class">
           Add Another Name
         </button>
+
+        </p>
 
         {/* {roster.FirstName.map((FirstName, idx) => (
           <input
@@ -80,15 +94,10 @@ export const CreateClass = () => {
           />
         ))} */}
 
-        <label htmlFor="LastName">Last Name</label>
-        <textarea
-          id="LastName"
-          name="LastName"
-          onChange={handleChange}
-        ></textarea>
+
 
         <div>
-          <button type="submit">Create Class Roster</button>
+          <button type="submit" class="create-class-submit">Create Class Roster</button>
         </div>
       </form>
     </div>
