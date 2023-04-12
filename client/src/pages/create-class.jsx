@@ -39,9 +39,9 @@ export const CreateClass = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/create-class", roster);
+      await axios.post("http://localhost:3001/roster", roster);
       alert("Roster Created!");
-      navigate("/");
+      navigate("/class-list");
     } catch (err) {
       console.error(err);
     }
