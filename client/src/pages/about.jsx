@@ -10,7 +10,6 @@ export const About = () => {
         width="900px"
         className="school_image"
       />
-      <h2 class="tagline">
 
       <h1 className="about">About This App</h1>
       <h2 className="tagline">
