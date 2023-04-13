@@ -11,9 +11,11 @@ export const CreateClass = () => {
   const userID = useGetUserID();
 
   const [roster, setRoster] = useState({
-    Subject: "",
-    FirstName: "",
-    LastName: "",
+    studentName: "",
+    courses: [],
+    notesOnStudent: "",
+    studentPhoto: "",
+    absences: 0,
     userOwner: userID,
   }); //state that keeps track of roster we are creating
   //put on initial structure of how object will look
@@ -25,15 +27,15 @@ export const CreateClass = () => {
     setRoster({ ...roster, [name]: value });
   };
 
-  const handleFirstNameChange = (event, idx) => {
+  const handleCourseChange = (event, idx) => {
     const { value } = event.target;
-    const FirstName = roster.FirstName;
-    FirstName[idx] = value;
-    setRoster({ ...roster, FirstName });
+    const courses = roster.courses;
+    courses[idx] = value;
+    setRoster({ ...roster, courses });
   };
 
-  const addFirstName = () => {
-    setRoster({ ...roster, FirstName: [...roster.FirstName, ""] }); //setting roster object to be the same as it was before but whatever is after the comma is what id going to change in the object
+  const addCourse = () => {
+    setRoster({ ...roster, courses: [...roster.courses, ""] }); //setting courses object to be the same as it was before but whatever is after the comma is what id going to change in the object
   };
 
   const onSubmit = async (event) => {
@@ -48,57 +50,46 @@ export const CreateClass = () => {
   };
 
   return (
-    <div className="create-roster">
-      <h2 class="title-roster">Create Class Roster</h2>
+    <div className="create-class">
+      <h2>Create Class Roster</h2>
       <form onSubmit={onSubmit}>
-        <p><label htmlFor="subject" class="subject-create">Subject</label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          class="subject-input"
-          onChange={handleChange}
-        /></p>
-
-        <p><label htmlFor="FirstName" class="create-fn">First Name</label>
-        <input
-          id="FirstName"
-          name="FirstName"
-          class="first-input"
-          onChange={handleChange}
-        ></input>
-
-<label htmlFor="LastName" class="create-ln">Last Name</label>
-        <input
-          id="LastName"
-          name="LastName"
-          class="last-input"
-          onChange={handleChange}
-        ></input>
-        </p>
-
-<p>
-        <button onClick={addFirstName} type="button" class="aan-create-class">
-          Add Another Name
-        </button>
-
-        </p>
-
-        {/* {roster.FirstName.map((FirstName, idx) => (
+        <label htmlFor="studentName">Student Name</label>
+        <input type="text" id="name" name="name" onChange={handleChange} />
+        <label htmlFor="enrolledSubjects">Enrolled Courses</label>
+        {/* //adding course and index of that course */}
+        {roster.courses.map((course, idx) => (
           <input
             key={idx}
             type="text"
-            name="FirstName"
-            value={FirstName}
-            onChange={(event) => handleFirstNameChange(event, idx)}
+            name="courses"
+            value={course}
+            onChange={(event) => handleCourseChange(event, idx)}
           />
-        ))} */}
-
-
-
-        <div>
-          <button type="submit" class="create-class-submit">Create Class Roster</button>
-        </div>
+        ))}
+        <button onClick={addCourse} type="button">
+          Add Subject{" "}
+        </button>
+        <label htmlFor="notesOnStudent">Notes on Student</label>
+        <textarea
+          id="notesOnStudent"
+          name="notesOnStudent"
+          onChange={handleChange}
+        ></textarea>
+        <label htmlFor="studentPhoto">Student Profile Picture</label>
+        <input
+          type="text"
+          id="studentPhoto"
+          name="studentPhoto"
+          onChange={handleChange}
+        />
+        <label htmlFor="absences">Total Absences</label>
+        <input
+          type="number"
+          id="absences"
+          name="absences"
+          onChange={handleChange}
+        />
+        <button type="submit">CreateStudent Profile</button>
       </form>
     </div>
   );

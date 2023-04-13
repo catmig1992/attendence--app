@@ -26,16 +26,16 @@ router.post("/", async (req, res) => {
 });
 
 //route for saving a class roster
-// router.put("/create-class", async (req, res) => {
-//   try {
-//     const roster = await RosterModel.findById(req.body.rosterID); //finding class roster
-//     const user = await UserModel.findById(req.body.userID); //finding admin user we want to save
-//     user.savedRoster.push(roster); //'push' for adding to the end of the saved class roster
-//     await user.save(); //save this user (admin user) and save the changes into our collection
-//     res.json({ savedRoster: user.roster }); //returning saved roster
-//   } catch (err) {
-//     res.json(err);
-//   }
-// });
+router.put("/create-class", async (req, res) => {
+  try {
+    const roster = await RosterModel.findById(req.body.rosterID); //finding class roster
+    const user = await UserModel.findById(req.body.userID); //finding admin user we want to save
+    user.savedRoster.push(roster); //'push' for adding to the end of the saved class roster
+    await user.save(); //save this user (admin user) and save the changes into our collection
+    res.json({ savedRoster: user.roster }); //returning saved roster
+  } catch (err) {
+    res.json(err);
+  }
+});
 
 export { router as rosterRouter };
