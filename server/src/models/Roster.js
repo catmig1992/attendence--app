@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 
 const RosterSchema = new mongoose.Schema({
-  Subject: { type: String, required: true },
-  FirstName: { type: String, required: true },
-  LastName: { type: String, required: true },
+  studentName: { type: String, required: true },
+  subjectsEnrolled: [{ type: String, required: true }],
+  studentPhoto: { type: String, required: true },
+  absences: { type: Number, required: true },
   userOwner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "users",
