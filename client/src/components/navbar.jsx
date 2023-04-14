@@ -29,9 +29,9 @@ export const Navbar = () => {
         {" "}
         Create Class Roster{" "}
       </Link>
-      <Link className="nav-link" to="/class-list">
+      <Link className="nav-link" to="/student-profiles">
         {" "}
-        Class List{" "}
+        Student Profiles{" "}
       </Link>
       {!cookies.access_token ? (
         <Link to="/auth"> Login/Register</Link>
