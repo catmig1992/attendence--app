@@ -51,14 +51,15 @@ export const CreateClass = () => {
 
   return (
     <div className="create-class">
-      <h2>Create Class Roster</h2>
+      <h2 class="create-roster">Create Class Roster</h2>
       <form onSubmit={onSubmit}>
-        <label htmlFor="studentName">Student Name</label>
-        <input type="text" id="name" name="name" onChange={handleChange} />
-        <label htmlFor="enrolledSubjects">Enrolled Courses</label>
+        <label htmlFor="studentName" class="create-fn">Student Name</label>
+        <input class ="first-input"type="text" id="name" name="name" onChange={handleChange} />
+        <label htmlFor="enrolledSubjects" class="enrolled">Enrolled Courses</label>
         {/* //adding course and index of that course */}
         {roster.courses.map((course, idx) => (
           <input
+          class="subject-create"
             key={idx}
             type="text"
             name="courses"
@@ -66,30 +67,30 @@ export const CreateClass = () => {
             onChange={(event) => handleCourseChange(event, idx)}
           />
         ))}
-        <button onClick={addCourse} type="button">
+        <button onClick={addCourse} type="button" class="aan-create-class">
           Add Subject{" "}
         </button>
-        <label htmlFor="notesOnStudent">Notes on Student</label>
+        <label htmlFor="notesOnStudent" class="notes">Notes on Student</label>
         <textarea
           id="notesOnStudent"
           name="notesOnStudent"
           onChange={handleChange}
         ></textarea>
-        <label htmlFor="studentPhoto">Student Profile Picture</label>
+        <label htmlFor="studentPhoto" class="photo">Student Profile Picture</label>
         <input
           type="text"
           id="studentPhoto"
           name="studentPhoto"
           onChange={handleChange}
         />
-        <label htmlFor="absences">Total Absences</label>
+        <label htmlFor="absences" class="absence">Total Absences</label>
         <input
           type="number"
           id="absences"
           name="absences"
           onChange={handleChange}
         />
-        <button type="submit">CreateStudent Profile</button>
+        <button type="submit" class="create-class-submit">CreateStudent Profile</button>
       </form>
     </div>
   );

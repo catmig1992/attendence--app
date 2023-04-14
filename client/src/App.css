@@ -275,15 +275,31 @@ label {
 .create-roster {
   background-color: #4d15e9;
   color: white;
-  padding: 80px;
-  font-size: 30px;
-  margin: 60px;
+  padding: 50px;
+  font-size: 60px;
+  margin: 80px;
+  text-align:center;
+}
+
+.create-class{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 20px;
+    margin-top: 70px;
+    grid-gap: 10px;
+    background-color: #4d15e9;
+    padding: 20px;
+    color: white;
+    text-align: left;
+  
+  
 }
 
 .title-roster {
   text-align: center;
-  font-size: 70px;
-  margin-top: 10px;
+  font-size: 90px;
+  margin-top: 40px;
 }
 
 .aan-create-class {
@@ -294,6 +310,9 @@ label {
   padding-bottom: 10px;
   font-size: 20px;
   border-radius: 10px;
+  float:left;
+  margin-left:10px;
+  margin-bottom:5px;
 }
 
 .create-class-submit {
@@ -304,14 +323,24 @@ label {
   padding-bottom: 10px;
   font-size: 20px;
   border-radius: 10px;
+  margin-left:50px;
+  margin-top:40px;
+}
+.enrolled{
+  float:left;
+  margin-top: 10px;
+  margin-left: 50px;
 }
 
 .subject-create {
   padding-right: 30px;
+
 }
 
 .create-fn {
-  padding-right: 30px;
+  
+  margin-left:50px;
+  margin-top:10px;
 }
 
 .create-ln {
@@ -328,9 +357,53 @@ label {
 }
 
 .first-input {
-  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: 30px;
+  margin-bottom:14px;
+  
 }
 
+.notes{
+float:left;
+margin-left:50px;
+margin-top:30px;
+  
+}
+
+#notesOnStudent{
+
+  margin-top: 20px;
+  margin-left:20px;
+  padding-left:50px;
+}
+
+.first-input::after{
+  content: "\a";
+  white-space: pre;
+
+}
+
+.photo {
+ margin-left:45px;
+  margin-top:50px;
+}
+
+#studentPhoto{
+  margin-top:20px;
+  margin-left:20px;
+}
+
+.absence{
+  float:left;
+  margin-left:45px;
+  margin-top:45px;
+}
+
+#absences{
+  margin-top:30px;
+  margin-left:40px;
+  padding-left:50px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
