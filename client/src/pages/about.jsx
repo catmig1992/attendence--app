@@ -10,7 +10,6 @@ export const About = () => {
         className="school_image"
       />
 
-      <h1 className="about">About This App</h1>
       <h2 className="tagline">
         This is an attendance application that will record class attendance for
         Educators to keep record of class.
