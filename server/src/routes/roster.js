@@ -27,42 +27,6 @@ router.post("/", verifyToken, async (req, res) => {
   }
 });
 
-//route for saving a class roster
-router.put("/", async (req, res) => {
-  try {
-    const roster = await RosterModel.findById(req.body.rosterID); //finding class roster
-    const user = await UserModel.findById(req.body.userID); //finding admin user we want to save
-    user.savedRoster.push(roster); //'push' for adding to the end of the saved class roster
-    await user.save(); //save this user (admin user) and save the changes into our collection
-    res.json({ savedRoster: user.roster }); //returning saved roster
-  } catch (err) {
-    res.json(err);
-  }
-});
 
-//list of saved roster
-//get a list of the saved roster of the user who is logged-in
-router.get("/savedRoster/ids/:userID", async (req, res) => {
-  try {
-    const user = await UserModel.findById(req.params.userID);
-    res.json({ savedRoster: user?.savedRoster }); //return saved roster of that Admin user
-  } catch (err) {
-    res.json(err);
-  }
-});
-
-//route for getting only saved roster
-router.get("/savedRoster/:userID", async (req, res) => {
-  try {
-    const user = await UserModel.findById(req.params.userID);
-    const savedRoster = await RosterModel.find({
-      _id: { $in: user.savedRoster },
-    });
-
-    res.json({ savedRoster });
-  } catch (err) {
-    res.json(err);
-  }
-});
 
 export { router as rosterRouter };
