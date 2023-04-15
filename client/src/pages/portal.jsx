@@ -9,12 +9,12 @@ export const Portal = () => {
       </Link>
 
       <div className="grid-container">
-        <form action="/add/:id" method="post">
+        <form action="/add/:id" method="POST">
           <button type="submit" className="absent">
             Absent
           </button>
         </form>
-        <form action="/add/:id" method="post">
+        <form action="/add/:id" method="POST">
           <button type="submit" className="present">
             Present
           </button>
@@ -24,4 +24,4 @@ export const Portal = () => {
   );
 };
 
-//Class Attendance Sheet Link
+// this page needs a new layout or to be deleted
