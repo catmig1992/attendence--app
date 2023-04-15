@@ -1,14 +1,10 @@
-// export const CreateClass =() =>{
-//     return <div>Create Class Roster</div>;
-// };
-
 import { useState } from "react";
 import axios from "axios";
 import { useGetUserID } from "../hooks/useGetUserId";
 import { useNavigate } from "react-router-dom";
 
 export const CreateClass = () => {
-  const userID = useGetUserID();
+  const userID = useGetUserID(); //using hook
 
   const [roster, setRoster] = useState({
     studentName: "",
@@ -23,7 +19,7 @@ export const CreateClass = () => {
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target; //name = name property of each input for the forms
     setRoster({ ...roster, [name]: value });
   };
 
@@ -42,7 +38,7 @@ export const CreateClass = () => {
     event.preventDefault();
     try {
       await axios.post("http://localhost:3001/roster", roster);
-      alert("Roster Created!");
+      alert("Student Profile Created!");
       navigate("/student-profiles");
     } catch (err) {
       console.error(err);
@@ -50,66 +46,88 @@ export const CreateClass = () => {
   };
 
   return (
-    <div className="create-class">
-      <h2 class="create-roster">Create Class Roster</h2>
-      <form onSubmit={onSubmit}>
-        <label htmlFor="studentName" class="create-fn">
-          Student Name
-        </label>
-        <input
-          class="first-input"
-          type="text"
-          id="studentName"
-          name="studentName"
-          onChange={handleChange}
-        />
-        <label htmlFor="enrolledSubjects" class="enrolled">
-          Enrolled Courses
-        </label>
-        {/* //adding course and index of that course */}
-        {roster.courses.map((course, idx) => (
-          <input
-            class="subject-create"
-            key={idx}
-            type="text"
-            name="courses"
-            value={course}
-            onChange={(event) => handleCourseChange(event, idx)}
-          />
-        ))}
-        <button onClick={addCourse} type="button" class="aan-create-class">
-          Add Subject{" "}
-        </button>
-        <label htmlFor="notesOnStudent" class="notes">
-          Notes on Student
-        </label>
-        <textarea
-          id="notesOnStudent"
-          name="notesOnStudent"
-          onChange={handleChange}
-        ></textarea>
-        <label htmlFor="studentPhoto" class="photo">
-          Student Profile Picture
-        </label>
-        <input
-          type="text"
-          id="studentPhoto"
-          name="studentPhoto"
-          onChange={handleChange}
-        />
-        <label htmlFor="absences" class="absence">
-          Total Absences
-        </label>
-        <input
-          type="number"
-          id="absences"
-          name="absences"
-          onChange={handleChange}
-        />
-        <button type="submit" class="create-class-submit">
-          CreateStudent Profile
-        </button>
-      </form>
+    <div className="profile-form">
+      <div className="form-inputs">
+        <h2 className="form-title">Create Student Profile</h2>
+        <form className="form-area" onSubmit={onSubmit}>
+          <div className="input-area">
+            <label htmlFor="studentName" className="student-name">
+              Student Name
+            </label>
+            <input
+              className="name-input"
+              type="text"
+              id="studentName"
+              name="studentName"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="enrolled-area">
+            <label htmlFor="enrolledSubjects" className="enrolled">
+              Enrolled Courses
+            </label>
+
+            {/* //adding course and index of that course */}
+            {roster.courses.map((course, idx) => (
+              <input
+                className="enrolled-input"
+                key={idx}
+                type="text"
+                name="courses"
+                value={course}
+                onChange={(event) => handleCourseChange(event, idx)}
+              />
+            ))}
+
+            <button
+              onClick={addCourse}
+              type="button"
+              className="enrolled-subject"
+            >
+              Add Subject{" "}
+            </button>
+          </div>
+          <br />
+          <div className="input-area">
+            <label htmlFor="notesOnStudent" className="profile-notes">
+              Notes on Student
+            </label>
+
+            <textarea
+              id="notesOnStudent"
+              name="notesOnStudent"
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <div className="input-area">
+            <label htmlFor="studentPhoto" className="profile-photo">
+              Student Profile Picture
+            </label>
+
+            <input
+              type="text"
+              id="studentPhoto"
+              name="studentPhoto"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-area">
+            <label htmlFor="absences" className="absence">
+              Total Absences
+            </label>
+
+            <input
+              type="number"
+              id="absences"
+              name="absences"
+              onChange={handleChange}
+            />
+          </div>
+          <button type="submit" className="create-class-submit">
+            Create Student Profile
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

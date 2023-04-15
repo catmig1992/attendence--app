@@ -21,14 +21,19 @@ export const Navbar = () => {
         {" "}
         About{" "}
       </Link>
+
       <Link className="nav-link" to="/portal">
         {" "}
         Portal{" "}
       </Link>
+      {/* consider updating layout or deleting */}
+
       <Link className="nav-link" to="/create-class">
         {" "}
-        Create Class Roster{" "}
+        Create Profiles{" "}
       </Link>
+      {/* consider updating end-point name? from /create-class to /create-profiles or /create-roster */}
+
       <Link className="nav-link" to="/student-profiles">
         {" "}
         Student Profiles{" "}
