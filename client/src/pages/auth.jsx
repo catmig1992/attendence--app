@@ -39,7 +39,6 @@ const Login = () => {
   };
 
   return (
-
     //props for form
     <Form
       username={username}
@@ -71,8 +70,6 @@ const Register = () => {
   };
 
   return (
-
-    
     <Form
       username={username}
       setUsername={setUsername}
@@ -93,7 +90,6 @@ const Form = ({
   onSubmit,
 }) => {
   return (
-    
     <div className="auth-container">
       <form onSubmit={onSubmit}>
         <h2> {label} </h2>

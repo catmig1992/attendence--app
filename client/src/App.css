@@ -266,7 +266,6 @@ label {
 .name-input {
   padding-right: 60px;
   margin-left: 30px;
-  margin-bottom: 14px;
   width: 50em;
 }
 
@@ -283,25 +282,17 @@ label {
 
 .enrolled-input {
   margin: 0px 20px;
-  width: 40em;
+  width: 37.55em;
 }
 
 .enrolled-subject {
   background-color: #6d6875;
   color: white;
-  padding: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 40px;
   font-size: 20px;
   border-radius: 10px;
   float: left;
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
-
-.profile-notes {
-  margin: 0;
-  padding: 0;
+  margin: 0px 25px;
 }
 
 #notesOnStudent,
@@ -309,19 +300,15 @@ label {
 #absences {
   padding-right: 60px;
   margin-left: 30px;
-  width: 59em;
-}
-
-#notesOnStudent {
-  margin-top: 1em;
+  width: 58.98em;
 }
 
 #studentPhoto {
-  width: 46em;
+  width: 46.15em;
 }
 
 #absences {
-  width: 50em;
+  width: 49.8em;
 }
 
 .create-class-submit {
@@ -334,7 +321,7 @@ label {
 }
 
 /*****field-form component*****/
-.addfield {
+/* .addfield {
   background-color: gray;
   color: white;
   padding-left: 20px;
@@ -350,7 +337,7 @@ label {
   margin-left: 60px;
   padding-left: 100px;
   margin-top: 30px;
-}
+} */
 
 /*****navbar component*****/
 .navbar {
