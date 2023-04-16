@@ -15,7 +15,7 @@ The application has an easy form to fill out where student information can be en
 Incomplete portions:
 Update Student Profile
 Delete Student Profile
-Main Portal/Dashboard - to fetch data from the database to create class rosters, separating students by the class they are enrolled in
+Main Portal/Dashboard - to fetch data from the database to create class rosters, separating students by the class they are enrolled in, to add functionality to absent and present buttons
 
 Please note, when forking this repository the following list of packages need to be installed:
 axios,

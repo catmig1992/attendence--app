@@ -24,6 +24,4 @@ mongoose.connect(
 
 app.listen(3001, () => console.log("SERVER STARTED ON PORT 3001!!"));
 
-
 // app.listen(process.env.PORT)
-
